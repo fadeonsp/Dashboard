@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Montserrat', sans-serif;
+}
+html,body{
+    height: 100%;
+    background: #faf9fc;
+}
+
+.clear{clear: both;}
+
+div.sidebar{
+    background: #2d3035;
+    height: 100%;
+    width: 300px;
+    float: left;
+}
+div.topo{
+    background: #26282d;
+    text-align: center;
+    padding: 20px 10px;
+}
+div.topo h3{
+    color: white;
+}
+div.menu{
+    padding: 30px;
+}
+
+div.menu ul{list-style-type: none;}
+
+div.menu li{
+    transition: 1s;
+    font-size: 18px;
+    color: #717171;
+    margin-bottom: 20px;
+}
+
+div.menu ul li a{
+    font-size: 18px;
+    color: #717171;
+    text-decoration: none;
+}
+div.menu li:hover i{
+    transition: 1s;
+    color: #6d3bb8;
+}
+div.menu li:hover a {
+    transition: 1s;
+    color: white;
+}
+
+/*
+  FIM DA SIDEBAR
+*/
+
+div.main-content{
+    float: left;
+    width: calc(100% - 300px);
+    height: 100%;
+    background: #ccc;
+}
+header{
+    height: 90px;
+    background: #ccc;
+    padding: 20px 15px;
+    border-bottom: 2px solid #ccc;
+}
+.pesquisa-campo{
+    float: right;
+}
+.icone-pesquisa{
+    background: #7f7f7f;
+    width: 30px;
+    height:30px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    
+}
+
+.icone-pesquisa i{position: relative;top:5px;}
+
+.pesquisa-campo form{
+    display: inline-block;
+    vertical-align: middle;
+}
+.pesquisa-campo input[type=text]{
+    width: 200px;
+    height: 30px;
+    border-left: 0; 
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: 16px;
+}
+.pesquisa-campo input[type=text]:focus{
+    outline:  0;
+}   
+.icone-alerta{
+    cursor: pointer;
+    background: #ed7387;
+    width: 30px;
+    height: 30px;
+    margin-right: 28px;
+    float: right;
+    text-align: center;
+    position: relative;
+} 
+
+.icone-alerta p{
+    position: absolute;
+    left: -8px;
+    padding: -8px;
+    display: inline-block;
+    background: #ed7387;
+    color: white;
+    padding: 3px;
+    font-size: 12px;
+}
+
+.icone-alerta i{
+    line-height: 30px;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+.nome-usuario{
+    float: left;
+}
+.nome-usuario h2{
+    margin-top: 8px;
+    font-weight: normal;
+    font-size: 23px;
+    color:#a7a7a7;
+    cursor: pointer;
+}
+.content1{
+    float: left;
+    width: 80%;
+   padding: 30px;
+   overflow: auto;
+   height: calc(100% - 90px);
+}
+.panel{
+    margin-bottom: 10px;
+    padding: 30px;
+    width: 100%;
+    float: left;
+    border: 4px solid #ebebeb;
+    background: white;
+}
+.panel h2{
+    color: #7f7f7f;
+    font-size: 24px;
+    font-weight: normal;
+}
+.panel p{
+    font-size: 17px;
+    color: #b2b2b2;
+    margin-top: 10px;
+}
+
+.ultimas-atividades{
+    width: 20%;
+    background: #eaebeb;
+    padding: 20px 40px;
+    float: left;
+    height: calc(100% - 90px);
+    overflow-y: auto;
+}
+.atividades-topo h2{
+    color: #7f7f7f;
+    font-size: 25px;
+    font-weight: normal;
+    padding: 15px;
+    border-bottom: 1 px solid #ccc;
+}
+.atividades-registro{
+    position: relative;
+    margin: 15px 0;
+    border-left: 1px solid #bbbbbb;
+}
+
+.circle-atividades{
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: #e9ebeb;
+    border: 1 px solid #cccccc;
+   
+}
+.atividades-registro h2{
+    color: #bbbbbb;
+    font-size: 19px;
+    font-weight: normal;
+}
+.atividades-registro p{
+    color: #b2b2b2;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 768px)
+{
+    .ultimas-atividades{display: none;}
+    .content1{width: 100%;}
+    .panel{width: 100% !important;}
+    .sidebar{display: none; position: relative; z-index: 9999;}
+    div.main-content{
+        width: 100%;
+        position: absolute; left: 0; top: 0;
+    }
+}
